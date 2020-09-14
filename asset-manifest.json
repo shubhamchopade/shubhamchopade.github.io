@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/new-recipe-app/static/css/main.8a159a24.chunk.css",
-    "main.js": "/new-recipe-app/static/js/main.eb9eb810.chunk.js",
-    "main.js.map": "/new-recipe-app/static/js/main.eb9eb810.chunk.js.map",
-    "runtime-main.js": "/new-recipe-app/static/js/runtime-main.c7a04d72.js",
-    "runtime-main.js.map": "/new-recipe-app/static/js/runtime-main.c7a04d72.js.map",
-    "static/js/2.f4055409.chunk.js": "/new-recipe-app/static/js/2.f4055409.chunk.js",
-    "static/js/2.f4055409.chunk.js.map": "/new-recipe-app/static/js/2.f4055409.chunk.js.map",
-    "index.html": "/new-recipe-app/index.html",
-    "precache-manifest.8424b29e4bd1bae97de9e214fa1467c8.js": "/new-recipe-app/precache-manifest.8424b29e4bd1bae97de9e214fa1467c8.js",
-    "service-worker.js": "/new-recipe-app/service-worker.js",
-    "static/css/main.8a159a24.chunk.css.map": "/new-recipe-app/static/css/main.8a159a24.chunk.css.map",
-    "static/js/2.f4055409.chunk.js.LICENSE.txt": "/new-recipe-app/static/js/2.f4055409.chunk.js.LICENSE.txt",
-    "static/media/home-circle.svg": "/new-recipe-app/static/media/home-circle.11fdc86b.svg",
-    "static/media/shubham.png": "/new-recipe-app/static/media/shubham.cc1825ee.png"
+    "main.css": "/personal/static/css/main.8a159a24.chunk.css",
+    "main.js": "/personal/static/js/main.eb9eb810.chunk.js",
+    "main.js.map": "/personal/static/js/main.eb9eb810.chunk.js.map",
+    "runtime-main.js": "/personal/static/js/runtime-main.707182e9.js",
+    "runtime-main.js.map": "/personal/static/js/runtime-main.707182e9.js.map",
+    "static/js/2.b4f0ae62.chunk.js": "/personal/static/js/2.b4f0ae62.chunk.js",
+    "static/js/2.b4f0ae62.chunk.js.map": "/personal/static/js/2.b4f0ae62.chunk.js.map",
+    "index.html": "/personal/index.html",
+    "precache-manifest.a85a821f02bb7a075c8378c7d43af7fd.js": "/personal/precache-manifest.a85a821f02bb7a075c8378c7d43af7fd.js",
+    "service-worker.js": "/personal/service-worker.js",
+    "static/css/main.8a159a24.chunk.css.map": "/personal/static/css/main.8a159a24.chunk.css.map",
+    "static/js/2.b4f0ae62.chunk.js.LICENSE.txt": "/personal/static/js/2.b4f0ae62.chunk.js.LICENSE.txt",
+    "static/media/home-circle.svg": "/personal/static/media/home-circle.11fdc86b.svg",
+    "static/media/shubham.png": "/personal/static/media/shubham.cc1825ee.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7a04d72.js",
-    "static/js/2.f4055409.chunk.js",
+    "static/js/runtime-main.707182e9.js",
+    "static/js/2.b4f0ae62.chunk.js",
     "static/css/main.8a159a24.chunk.css",
     "static/js/main.eb9eb810.chunk.js"
   ]
