@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo-light.png";
+import { StyledLink } from "../Layout/Layout";
 
 const Ul = styled.ul`
   list-style: none;
   font-size: 15px;
   display: flex;
+  text-decoration: none;
 
   li {
-    color: #fff;
     font-family: "Poppins";
     padding: 0 0.5rem;
 
@@ -28,7 +30,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem auto;
+  margin: 1rem;
 
   img {
     max-width: 150px;
@@ -43,22 +45,25 @@ const Container = styled.div`
 const Navbar = () => {
   return (
     <Container>
-      <img className="logo" alt='logo' src={logo}></img>
+      <Link to="/">
+          <img className="logo" alt="logo" src={logo}></img>
+      </Link>
+
       <Ul>
         <li>
-          <a>about</a>
+          <StyledLink to="/about">about</StyledLink>
         </li>
         <li>
-          <a>projects</a>
+          <StyledLink to="/projects">projects</StyledLink>
         </li>
         <li>
-          <a>experience</a>
+          <StyledLink to="/experience">experience</StyledLink>
         </li>
         <li>
-          <a>skills</a>
+          <StyledLink to="/skills">skills</StyledLink>
         </li>
         <li>
-          <a>instagram</a>
+          <StyledLink to="/instagram">instagram</StyledLink>
         </li>
       </Ul>
     </Container>
