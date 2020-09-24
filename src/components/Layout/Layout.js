@@ -56,6 +56,7 @@ export const P = styled.p`
   font-size: 1rem;
   color: #e0e0e0;
   font-family: Poppins;
+  max-width: 400px;
 `;
 
 export const PrimaryButton = styled.button`
@@ -66,6 +67,7 @@ export const PrimaryButton = styled.button`
   width: 100px;
   border-radius: 5px;
   opacity: 0.9;
+  cursor: pointer ;
 
   &:hover {
     opacity: 0.8;
@@ -86,11 +88,15 @@ export const StyledLink = styled(Link)`
   &:active {
     text-decoration: none;
   }
+  }
 `;
+
+
 
 export const SPAN = styled.span`
   color: white;
-  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  background: linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+  background-blend-mode: screen, overlay, hard-light, normal;
   background-repeat: no-repeat;
   background-size: 100% 0.1em;
   background-position: 0 88%;

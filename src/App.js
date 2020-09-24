@@ -3,8 +3,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Songs from "./pages/Songs";
 import Header from "./components/Header/Header";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -12,8 +12,9 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/projects' component={Projects} />
         <Route exact path='/about' component={About} />
-        <Route exact path='/songs' component={Songs} />
+        <Route exact path='/skills' component={Skills} />
       </Switch>
     </div>
   );

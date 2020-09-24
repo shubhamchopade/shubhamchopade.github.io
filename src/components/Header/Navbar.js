@@ -13,10 +13,23 @@ const Ul = styled.ul`
   li {
     font-family: "Poppins";
     padding: 0 0.5rem;
+    width: 100%;
 
     &:hover {
       opacity: 0.8;
       cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    color: white;
+  
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
     }
   }
 
@@ -26,16 +39,25 @@ const Ul = styled.ul`
   }
 `;
 
+const HomeLink = styled(StyledLink)`
+img {
+  max-width: 250px;
+  width: 50%;
+  filter: invert(90%);
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    filter: invert(0%);
+  }
+}
+`
+
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
 
-  img {
-    max-width: 150px;
-    width: 50%;
-  }
 
   @media (max-width: 720px) {
     flex-direction: column;
@@ -45,9 +67,8 @@ const Container = styled.div`
 const Navbar = () => {
   return (
     <Container>
-      <Link to="/">
-          <img className="logo" alt="logo" src={logo}></img>
-      </Link>
+      <HomeLink to='/'><img className="logo" alt="logo" src={logo}></img></HomeLink>
+        
 
       <Ul>
         <li>
@@ -57,13 +78,12 @@ const Navbar = () => {
           <StyledLink to="/projects">projects</StyledLink>
         </li>
         <li>
-          <StyledLink to="/experience">experience</StyledLink>
-        </li>
-        <li>
           <StyledLink to="/skills">skills</StyledLink>
         </li>
         <li>
-          <StyledLink to="/instagram">instagram</StyledLink>
+          <a target="_blank" href="https://instagram.com/tech.sapien">
+            instagram
+          </a>
         </li>
       </Ul>
     </Container>

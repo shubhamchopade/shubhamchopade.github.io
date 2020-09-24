@@ -10,6 +10,7 @@ import {
   SPAN,
   PrimaryButton,
   ColoredLine,
+  StyledLink,
 } from "../components/Layout/Layout";
 import { IconContext } from "react-icons";
 import { FaBeer, FaHamburger, FaUikit, FaInstagram } from "react-icons/fa";
@@ -45,8 +46,6 @@ const StyledService = styled.div`
       margin-left: 1rem;
       line-height: 100%;
       text-transform: uppercase;
-
-
     }
   }
 
@@ -73,7 +72,7 @@ const serviceData = [
     icon: <FaInstagram />,
     description:
       "Developing highly scalable websites. Designing responsive websites using ReactJS",
-  }
+  },
 ];
 
 const Home = () => {
@@ -83,14 +82,20 @@ const Home = () => {
         <IconContext.Provider value={{ color: "white", size: "3em" }}>
           <H1>Hi,</H1>
           <H3>
-            I am <SPAN>Shubham Chopade.</SPAN><br /> a web designer/developer based in Pune, India. I love creating
-            things for web.
+            I am <SPAN>Shubham Chopade.</SPAN>
+            <br /> a web designer/developer based in Pune, India. I love
+            creating things for web.
           </H3>
           <PrimaryButton>Let's talk</PrimaryButton>
           {/* using inline styling to put upper margin */}
-          <P style={{ marginTop: "4rem", marginBottom: "4rem", backgroundColor: '#385F79' }}>
-            <u>I can help you with</u>
-          </P>
+          <H3
+            style={{
+              marginTop: "4rem",
+              marginBottom: "4rem",
+            }}
+          >
+            I can <SPAN>help</SPAN> you with
+          </H3>
           <StyledServiceContainer>
             {serviceData.map((elem) => (
               <StyledService>
@@ -104,7 +109,11 @@ const Home = () => {
             ))}
           </StyledServiceContainer>
         </IconContext.Provider>
-        <H4 style={{marginTop: 50, marginLeft: 'auto'}}>SEE MY PROJECTS <span>→</span></H4>
+        
+          <H4 style={{ marginTop: 50, marginLeft: "auto", display: 'block' }}>
+          <StyledLink to='/projects'>SEE MY PROJECTS</StyledLink> <span>→</span>
+          </H4>
+        
       </Layout>
     </>
   );
