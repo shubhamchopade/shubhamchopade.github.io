@@ -1,14 +1,6 @@
 import React from "react";
 import {
-  Layout,
-  H1,
-  H2,
-  H3,
   H4,
-  P,
-  SPAN,
-  PrimaryButton,
-  ColoredLine,
 } from "../components/Layout/Layout";
 import { IconContext } from "react-icons";
 import { FaHtml5, FaCss3, FaReact, FaGithub, FaFigma, FaMarkdown } from "react-icons/fa";

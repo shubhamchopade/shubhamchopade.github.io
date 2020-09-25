@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout, H1, H2, P, H3, SPAN } from "../components/Layout/Layout";
+import { Layout, H1, H2, P, SPAN } from "../components/Layout/Layout";
 import shubham from "../assets/logo/shubham.png";
-import { Link } from "react-router-dom";
-import { IconContext } from "react-icons";
 import { FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
 
 const iconData = [
@@ -44,7 +42,8 @@ const ImgContainer = styled.div`
     flex-direction: column-reverse;
 
     P {
-      margin: 2rem 0 1rem 0;
+      display: block;
+      margin: 2rem auto 1rem auto;
     }
 
     img {
@@ -57,11 +56,21 @@ const ImgContainer = styled.div`
 const AboutSocial = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   max-width: 300px;
-  margin: 1rem 0;
+  margin: 2rem auto;
+
+  H2 {
+    font-size: 1rem;
+    color: darkgrey;
+    text-decoration: underline;
+    margin-right: 1rem;
+    display: block;
+  }
 
   li {
+    margin: 0 0.7rem;
     color: white;
     transform: scale(1.5);
     transition: all 0.25s ease-in;
@@ -91,8 +100,9 @@ const About = () => {
           <img src={shubham} alt=""></img>
         </div>
       </ImgContainer>
-      <H2>Social Media</H2>
+      
       <AboutSocial>
+      <H2>Social Media</H2>
         {iconData.map((icon) => (
           <li>{icon.icon}</li>
         ))}

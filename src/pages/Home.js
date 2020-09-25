@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {
   Layout,
   H1,
-  H2,
   H3,
   H4,
   P,
@@ -13,7 +12,21 @@ import {
   StyledLink,
 } from "../components/Layout/Layout";
 import { IconContext } from "react-icons";
-import { FaBeer, FaHamburger, FaUikit, FaInstagram } from "react-icons/fa";
+import { FaHamburger, FaUikit, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const HomeLayout = styled(Layout)`
+  margin-top: 3rem;
+  cursor: default;
+
+  H3 {
+    max-width: 600px;
+  }
+`;
+
+const AnimatedH1 = styled(motion.h1)`
+  color: white;
+`;
 
 const StyledServiceContainer = styled.section`
   display: flex;
@@ -25,7 +38,7 @@ const StyledService = styled.div`
   padding: 1rem;
   margin: 5px;
   flex: 1 1 220px;
-  cursor: pointer;
+  cursor: default;
 
   &:hover {
     transform: scale(1.02);
@@ -78,9 +91,10 @@ const serviceData = [
 const Home = () => {
   return (
     <>
-      <Layout>
+      <HomeLayout>
         <IconContext.Provider value={{ color: "white", size: "3em" }}>
-          <H1>Hi,</H1>
+          <AnimatedH1>Hi,</AnimatedH1>
+
           <H3>
             I am <SPAN>Shubham Chopade.</SPAN>
             <br /> a web designer/developer based in Pune, India. I love
@@ -109,12 +123,11 @@ const Home = () => {
             ))}
           </StyledServiceContainer>
         </IconContext.Provider>
-        
-          <H4 style={{ marginTop: 50, marginLeft: "auto", display: 'block' }}>
-          <StyledLink to='/projects'>SEE MY PROJECTS</StyledLink> <span>→</span>
-          </H4>
-        
-      </Layout>
+
+        <H4 style={{ marginTop: 50, marginLeft: "auto", display: "block" }}>
+          <StyledLink to="/projects">SEE MY PROJECTS</StyledLink> <span>→</span>
+        </H4>
+      </HomeLayout>
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo-light.png";
 import { StyledLink } from "../Layout/Layout";
 
@@ -41,8 +40,9 @@ const Ul = styled.ul`
 
 const HomeLink = styled(StyledLink)`
 img {
-  max-width: 250px;
-  width: 50%;
+  margin: auto;
+  display: block;
+  width: 200px;
   filter: invert(90%);
   transition: all 0.2s ease-in;
 

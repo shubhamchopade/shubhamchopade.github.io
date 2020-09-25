@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Skills from "./pages/Skills";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/about' component={About} />
         <Route exact path='/skills' component={Skills} />
       </Switch>
+      <Footer />
     </div>
   );
 }
