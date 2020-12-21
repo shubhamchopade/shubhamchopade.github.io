@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -15,10 +15,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 1000px;
   margin: auto;
-  background-color: #040F16;
+  background-color: #040f16;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
 }

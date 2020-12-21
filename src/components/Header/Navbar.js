@@ -21,43 +21,48 @@ const Ul = styled.ul`
 
     a {
       text-decoration: none;
-    color: white;
-  
-    &:focus,
-    &:hover,
-    &:visited,
-    &:link,
-    &:active {
-      text-decoration: none;
+      color: white;
+
+      &:focus,
+      &:hover,
+      &:visited,
+      &:link,
+      &:active {
+        text-decoration: none;
+      }
     }
   }
 
   @media (max-width: 720px) {
-    transition: transform 0.3s ease-in-out;
-    margin: 1rem auto;
+    a {
+      transition: transform 0.3s ease-in-out;
+      margin: 1rem auto;
+    }
   }
 `;
 
 const HomeLink = styled(StyledLink)`
-img {
-  margin: auto;
-  display: block;
-  width: 200px;
-  filter: invert(90%);
-  transition: all 0.2s ease-in;
+  img {
+    margin: auto;
+    display: block;
+    width: 200px;
+    filter: invert(90%);
+    transition: all 0.1s ease-in;
 
-  &:hover {
-    filter: invert(0%);
+    &:hover {
+      filter: invert(0%);
+    }
+    &:active {
+      filter: invert(20%);
+    }
   }
-}
-`
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
-
 
   @media (max-width: 720px) {
     flex-direction: column;
@@ -67,8 +72,9 @@ const Container = styled.div`
 const Navbar = () => {
   return (
     <Container>
-      <HomeLink to='/'><img className="logo" alt="logo" src={logo}></img></HomeLink>
-        
+      <HomeLink to="/">
+        <img className="logo" alt="logo" src={logo}></img>
+      </HomeLink>
 
       <Ul>
         <li>

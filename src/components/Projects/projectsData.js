@@ -1,26 +1,31 @@
-export const data = [{
-  "img": "https://source.unsplash.com/random/200x200",
-  "name": "Business Name Generator",
-  "tags": "#css #html #js",
-  "description": "To access this information, we need to access the array index of the person we wish to access. For example, we would use the following snippet to access info stored in family"
-},
+import tailwindCSS from "./project/tailwind-css.svg";
+import techSapien from "./project/tech-sapien.svg";
+import businessNameGenerator from "./project/business-name-generator.svg";
 
-{
-  "img": "https://source.unsplash.com/random/200x200",
-  "name": "Business Name Generator",
-  "tags": "#css #html #js",
-  "description": "To access this information, we need to access the array index of the person we wish to access. For example, we would use the following snippet to access info stored in family"
-},
-{
-  "img": "https://source.unsplash.com/random/200x200",
-  "name": "Tech Sapien",
-  "tags": "#css #html #js",
-  "description": "To access this information, we need to access the array index of the person we wish to access. For example, we would use the following snippet to access info stored in family"
-},
-{
-  "img": "https://source.unsplash.com/random/200x200",
-  "name": "Business Name Generator",
-  "tags": "#css #html #js",
-  "description": "To access this information, we need to access the array index of the person we wish to access. For example, we would use the following snippet to access info stored in family"
-}
+export const data = [
+  {
+    img: tailwindCSS,
+    name: "Tailwind CSS Gradients",
+    link: "https://tailwindgradient.ml",
+    tags: "#tailwindcss #react #js",
+    description:
+      "A developer productivity tools which lets you generate a random gradients using the color palette of Tailwind CSS",
+  },
+
+  {
+    img: techSapien,
+    name: "The Book Pundits",
+    link: "https://thebookpundits.com",
+    tags: "#firebase #react #styledcomponentsa",
+    description:
+      "The Book Pundits is a platform for connecting authors with reviewers. A fully functional web app which uses Firebase at the backend and React in frontend.",
+  },
+  {
+    img: businessNameGenerator,
+    name: "Tech Sapien",
+    link: "https://techsapien.org",
+    tags: "#gatsby #graphql #css",
+    description:
+      "Tech sapien is a community targeted towards the programmers who strive for efficiency. This is a blog I maintain along with the instagram page.",
+  },
 ];
