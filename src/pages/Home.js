@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import {
   Layout,
@@ -14,13 +14,13 @@ import {
 import { IconContext } from "react-icons";
 import { FaHamburger, FaUikit, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
+import introVideo from "../assets/video/me.mp4";
 
 const HomeLayout = styled(Layout)`
   margin-top: 3rem;
   cursor: default;
 
-  H3 {
-    max-width: 600px;
+  .container {
   }
 `;
 
@@ -89,27 +89,61 @@ const serviceData = [
 ];
 
 const Home = () => {
+  const videoEl = useRef(null);
+  const homeRef = useRef(null);
+  const playbackConst = 1000;
+  const [scrollValue, setScrollValue] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    videoEl.current.addEventListener("loadedmetadata", function () {
+      const progress = Math.floor(videoEl.current.duration) * playbackConst;
+      homeRef.current.style.height = progress + "px";
+    });
+    videoEl.current.style.position = "sticky";
+    videoEl.current.style.top = "50%";
+    videoEl.current.style.left = "50%";
+    videoEl.current.style.marginTop = "10rem";
+    videoEl.current.style.transform = "translate(-50%, -50%)";
+    console.log(window.scrollY);
+  }, []);
+
+  useEffect(() => {
+    function scrollPlay() {
+      var frameNumber = window.pageYOffset / playbackConst;
+      videoEl.current.currentTime = frameNumber;
+      window.requestAnimationFrame(scrollPlay);
+    }
+
+    scrollPlay();
+  }, []);
+
+  const handleScroll = (e) => {
+    setScrollValue(window.scrollY);
+    console.log(window.scrollY, window.scrollX);
+  };
+
   return (
-    <>
+    <div>
       <HomeLayout>
         <IconContext.Provider value={{ color: "white", size: "3em" }}>
           <AnimatedH1>Hi,</AnimatedH1>
-
-          <H3>
-            I am <SPAN>Shubham Chopade.</SPAN>
-            <br /> a web designer/developer based in Pune, India. I love
-            creating things for web.
-          </H3>
-          <PrimaryButton>Let's talk</PrimaryButton>
-          {/* using inline styling to put upper margin */}
-          <H3
-            style={{
-              marginTop: "4rem",
-              marginBottom: "4rem",
-            }}
-          >
-            I can <SPAN>help</SPAN> you with
-          </H3>
+          <div className="container">
+            <div>
+              <H3>
+                I am <SPAN>Shubham Chopade.</SPAN>
+                <br /> a web designer/developer based in Pune, India. I love
+                creating things for web.
+              </H3>
+              <PrimaryButton>Let's talk</PrimaryButton>
+            </div>
+            <div ref={homeRef}>
+              <video ref={videoEl} width="320" height="240" autobuffer preload>
+                <source src={introVideo} type="video/mp4" />
+              </video>
+            </div>
+            {/* <button onClick={handleClick}>play</button> */}
+          </div>
           <StyledServiceContainer>
             {serviceData.map((elem) => (
               <StyledService>
@@ -128,7 +162,7 @@ const Home = () => {
           <StyledLink to="/projects">SEE MY PROJECTS</StyledLink> <span>→</span>
         </H4>
       </HomeLayout>
-    </>
+    </div>
   );
 };
 
